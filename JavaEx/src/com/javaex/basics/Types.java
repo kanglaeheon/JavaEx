@@ -3,30 +3,45 @@ package com.javaex.basics;
 // 변수 예제,
 // 데이터 타입 예제
 public class Types {
+	static final int SPEED_LIMIT = 120;
 	public static void main(String[] args) {
 //		주석처리 단축키 : ctrl + /
 //		varEx();
 //		integerEX();
 //		floatDoubleEx();
 //		booleanEx();
-		charEx();
+//		charEx();
+		constantEx();
 	}
+
+	// 상수
+	private static void constantEx() {
+//		final int SPEED_LIMIT = 120;
+
+		System.out.println("제한속도 : " + SPEED_LIMIT);
+		System.out.println("현재 도로의 제한 속도는 " + SPEED_LIMIT + "입니다.");
+		// 코드의 가독성과 코드의 변경이 용이해진다.
+		
+//		SPEED_LIMIT = 160; // 변경 시도 불가(final)
+		System.out.println("제한속도 : " + SPEED_LIMIT);
+		System.out.println("현재 도로의 제한 속도는 " + SPEED_LIMIT + "입니다.");
+	}
+
 	// 문자형 데이터 타입
 	private static void charEx() {
 		// 부호가 없는 정수 코드
 		char ch1 = 'A';
 		char ch2 = '한';
-		
+
 		System.out.println(ch1);
 		System.out.println(ch2);
-		
+
 		System.out.println(ch1 + ch2);
-		
+
 		String str = "A한";
 		System.out.println(str);
 	}
-	
-	
+
 	// 논리형 데이터 타입
 	private static void booleanEx() {
 		// 1byte : true or false
