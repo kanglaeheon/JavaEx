@@ -7,10 +7,28 @@ public class Types {
 //		주석처리 단축키 : ctrl + /
 //		varEx();
 //		integerEX();
-		floatDoubleEx();
+//		floatDoubleEx();
+		booleanEx();
 	}
 	
-	//실수형 데이터 타입
+	//	논리형 데이터 타입
+	private static void booleanEx() {
+		//	1byte : true or false
+		//	조건 분기, 반복문 등에 활용 -> 중요!!!
+		boolean b1 = true;
+		boolean b2 = false;
+		
+		System.out.println(b1);
+		System.out.println(b2);
+		
+		//	비교 연산, 논리 연산의 결과로 활용
+		int a = 7, b = 3;
+		boolean result = a > b;
+		
+		System.out.println(result);
+	}
+	
+	//	실수형 데이터 타입
 	private static void floatDoubleEx() {
 		// float(4) < double(8)
 		float floatVar = 3.14159f;	//	f or F
@@ -33,7 +51,7 @@ public class Types {
 		System.out.println(0.1 * 3);
 	}
 	
-	//정수형 데이터 타입
+	//	정수형 데이터 타입
 	private static void integerEX() {
 		//	byte(1) < short(2) < int(4) < long(8)
 		int intVar1, intVar2; // 선언
