@@ -14,6 +14,9 @@ public class Quiz02_2 {
 		int extra = balls % cap;
 		int box = balls / cap;
 		System.out.println( extra == 0 ? box : box+1);
+		
+//		box += extra > 0 ? 1 : 0;
+//		System.out.println(box);
 	}
 
 }
