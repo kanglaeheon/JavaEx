@@ -11,6 +11,9 @@ public class Quiz02_3 {
 		int extra = num % 100;
 		int result = num - extra;
 		
+//		선생님 풀이
+//		int result = num / 100 * 100;
+		
 //		결과를 화면에 출력해 봅시다.
 		System.out.println(result);
 	}
