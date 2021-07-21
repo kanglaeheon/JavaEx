@@ -1,6 +1,6 @@
 package com.javaex.bookquiz;
 
-public class Exercise06 {
+public class Exercise05_06 {
 
 	public static void main(String[] args) {
 		int row; // 행

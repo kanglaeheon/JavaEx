@@ -1,6 +1,6 @@
 package com.javaex.bookquiz;
 
-public class Exercise04 {
+public class Exercise05_04 {
 
 	public static void main(String[] args) {
 
