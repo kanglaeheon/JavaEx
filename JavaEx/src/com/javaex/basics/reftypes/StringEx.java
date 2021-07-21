@@ -3,9 +3,37 @@ package com.javaex.basics.reftypes;
 public class StringEx {
 
 	public static void main(String[] args) {
-		stringType();
+//		stringType();
+		stringFormatEx();
 	}
 
+	// string format 연습
+	private static void stringFormatEx( ) {
+		//	%d(정수), %s(문자열), %n(개행), %%(%), %f(실수)
+		String food = "사과";
+		int total = 10, eat = 3;
+		
+		//	total 개의 food 중에서 eat 개를 먹었다.
+		System.out.println(total + " 개의 " + food + " 중에서 " + eat + "개를 먹었다");
+		
+		//	템플릿
+		String fmt = "%d 개의 %s 중에서 %d 개를 먹었다%n";
+		System.out.printf(fmt, total, food, eat);
+		
+		String message = String.format(fmt, 5, "버거", 2);
+		System.out.println(message);
+		
+		//	부가 정보를 가지기도 한다.
+		float rate = 1.234f;
+		//	현재 이자율은 ___ % 입니다.
+		fmt = "현재 이자율은 %f%% 입니다.%n";
+		System.out.printf(fmt, rate);
+		
+		fmt = "현재 이자율은 %.2f%% 입니다.%n";		//	소수점 2자리까지 표기
+		System.out.printf(fmt, rate);
+		
+	}
+	
 	//	string type 연습
 	private static void stringType() {
 		//	문자열 선언
