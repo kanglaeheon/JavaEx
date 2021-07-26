@@ -20,12 +20,12 @@ public class ExceptionEx {
 			except.executeRuntimeException();
 			//	except의 executeException 메서드 내의 예외를 대신 처리
 			except.executeException();
-		} catch (CustomArithmeticException e) {
+		} 	catch (CustomArithmeticException e) {
 			System.err.println(e.getMessage());
 			System.err.printf("num1: %d%n", e.getNum1());
 			System.err.printf("num2: %d%n", e.getNum2());
 		}
-		catch (ArithmeticException e ) {
+			catch (ArithmeticException e ) {
 			System.err.println(e.getMessage());
 			System.err.println("0으로는 나눌 수 없습니다.");
 		}
