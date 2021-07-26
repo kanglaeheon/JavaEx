@@ -30,6 +30,6 @@ public class Point {
 			return x == other.x && y == other.y;
 		}
 		return super.equals(obj);
-	}
+	} 
 	
 }
