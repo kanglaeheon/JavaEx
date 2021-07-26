@@ -2,7 +2,7 @@ package com.javaex.bookquiz;
 
 import java.util.Scanner;
 
-public class Exercise06_09 {
+public class Exercise05_09 {
 
 	public static void main(String[] args) {
 		boolean run = true;

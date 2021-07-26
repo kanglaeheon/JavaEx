@@ -1,6 +1,6 @@
 package com.javaex.bookquiz;
 
-public class Exercise06_08 {
+public class Exercise05_08 {
 
 	public static void main(String[] args) {
 		int[][] array = { 

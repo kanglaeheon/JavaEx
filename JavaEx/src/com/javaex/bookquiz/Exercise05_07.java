@@ -1,6 +1,6 @@
 package com.javaex.bookquiz;
 
-public class Exercise06_07 {
+public class Exercise05_07 {
 
 	public static void main(String[] args) {
 		int max = 0;
