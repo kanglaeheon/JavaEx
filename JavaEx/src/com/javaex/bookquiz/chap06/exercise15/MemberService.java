@@ -1,4 +1,4 @@
-package com.javaex.bookquiz.Chapter06.Exercise15;
+package com.javaex.bookquiz.chap06.exercise15;
 
 public class MemberService {
 		Member user1 = new Member("홍길동", "hong");
