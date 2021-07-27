@@ -1,14 +1,25 @@
 package com.javaex.api.objectclass.v3;
 
-public class Rectangle {
+public class Rectangle implements Cloneable{
 	//	필드
-	private int width;
+	int width;
 	private int height;
 	
 	//	생성자
 	public Rectangle( int width, int height) {
 		this.width = width;
 		this.height = height;
+	}
+	
+	public Rectangle getClone() {
+		Rectangle clone = null;
+		
+		try {
+			clone = (Rectangle)clone();
+		}	catch (CloneNotSupportedException e ) {
+			e.printStackTrace();
+		}
+		return clone;
 	}
 	
 	@Override

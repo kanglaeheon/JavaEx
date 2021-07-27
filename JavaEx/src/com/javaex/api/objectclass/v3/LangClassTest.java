@@ -5,7 +5,8 @@ public class LangClassTest {
 	public static void main(String[] args) {
 		//	객체 복제 테스트
 		Point p = new Point(10, 20);
-		Point p2 = p;	//	참조 복제 : 객체 메모리 주소값만 복제해서 받아온다
+//		Point p2 = p;	//	참조 복제 : 객체 메모리 주소값만 복제해서 받아온다
+		Point p2 = p.getClone();
 		
 		System.out.println("p = " + p);
 		System.out.println("p2 = " + p2);
@@ -15,5 +16,17 @@ public class LangClassTest {
 		System.out.println("p2 = " + p2);
 		System.out.println("p = " + p);
 		//	참조 복제는 같은 객체를 참조
+		
+		Rectangle r1 = new Rectangle(50, 20);
+		Rectangle r2 = r1.getClone();
+		
+		System.out.println("r1 = " + r1);
+		System.out.println("r2 = " + r2);
+		
+		r2.width = 300;
+		System.out.println("r1 = " + r1);
+		System.out.println("r2 = " + r2);
+		
+		System.out.println("r1 == r2 ? " + (r1 == r2));
 	}
 }
