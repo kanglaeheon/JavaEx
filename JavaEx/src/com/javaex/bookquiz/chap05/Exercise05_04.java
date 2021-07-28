@@ -1,4 +1,4 @@
-package com.javaex.bookquiz;
+package com.javaex.bookquiz.chap05;
 
 public class Exercise05_04 {
 
