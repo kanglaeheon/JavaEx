@@ -57,6 +57,7 @@ public class VectorEx {
 		System.out.println();
 		
 		//	Enumeration : 반복자
+		//	순서대로 요소를 받아올 때는 반복자가 더 효율적
 		Enumeration<Integer> e = v.elements();	//	반복자 획득
 		while(e.hasMoreElements()) {	//	뒤에 요소가 남아있는지 확인
 			Integer item = e.nextElement();	//	요소를 추출 후 다음 요소로 이동
