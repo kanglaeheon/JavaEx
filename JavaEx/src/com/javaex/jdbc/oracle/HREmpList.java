@@ -2,38 +2,35 @@ package com.javaex.jdbc.oracle;
 
 import java.sql.*;
 
-public class SelectTest {
+public class HREmpList {
 
 	public static void main(String[] args) {
 		String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
-				
+		
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
 		
 		try {
-			//	1. 드라이버 로드
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//	2. Connection
 			conn = DriverManager.getConnection(dburl, "HR", "hr");
-			//	3. 질의객체(Statement)
+			String sql = "SELECT emp.first_name || ' ' || emp.last_name as name, "
+					+ " mgr.first_name || ' ' || mgr.last_name as mgr_name"
+					+ " FROM employees emp, employees mgr"
+					+ " WHERE emp.manager_id = mgr.employee_id"
+					+ " ORDER BY name DESC";
 			stmt = conn.createStatement();
-			//	4. SQL 설정
-			String sql = "SELECT department_id, department_name " +
-						" FROM departments ORDER BY department_id";
-			//	5. 실행
+			//	질의 수행
 			rs = stmt.executeQuery(sql);
-			
-//			System.out.println(rs);
-			//	루프 후 출력
-			while (rs.next()) {	//	다음 레코드 가져오기
-				int deptId = rs.getInt(1);	//	컬럼 순서
-				String deptName = rs.getString("department_name");
-				//	컬럼 이름으로 가져오기
-				System.out.printf("%d:%s%n", deptId, deptName);
+			while(rs.next()) {
+				String name = rs.getString("name");
+				String mgr_name = rs.getString("mgr_name");
+				
+				System.out.printf("Name: %s, Manager: %s%n", name, mgr_name);
 			}
+			
 		} catch (ClassNotFoundException e) {
-			System.err.println("드라이버 로드 실패!");			
+			System.err.println("드라이버 로드 실패!");
 		} catch (SQLException e) {
 			System.err.println("SQL Error!");
 		} finally {
